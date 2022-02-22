@@ -1,0 +1,255 @@
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* End Global Rules */
+/* Start Components */
+.center-items
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container
+{
+  width: 80vw;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+/* End Components */
+/* Start Header */
+header .container
+{
+  justify-content: space-between;
+  text-align: left;
+}
+.container .logo
+{
+  width: 60px;
+}
+.container .toggel
+{
+  width: 40px;
+  position: relative;
+}
+.toggel .icons
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+.toggel .icons span
+{
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  margin: 2px;
+}
+.toggel .icons .fill-line
+{
+  width: 50%;
+}
+.container .toggel:hover .fill-line 
+ {
+  width: 100%;
+  transition: var(--main-duration);
+}
+.toggel ul
+{
+  display: none;
+  list-style: none;
+  position: absolute;
+  top :calc(100% + 15px);
+  right :0px;
+  padding: 0%;
+  margin: 0%;
+  min-width: 200px;
+  z-index: 999;
+  background-color: var(--section-background);
+}
+.container .toggel:hover ul
+{
+  display: block;
+}
+.toggel ul::before
+{
+  content: "";
+  border : 10px solid ;
+  border-color:  transparent transparent var(--section-background) ;
+  position: absolute;
+  top: -21px;
+  right: 0;
+}
+.toggel ul li:not(:last-child) a
+{
+  border-bottom: 1px solid #ddd;
+}
+.toggel ul li a
+{
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #333;
+  transition: var(--main-duration);
+}
+.toggel ul li a:hover
+{
+  transform: translate(10px);
+}
+@media (max-width:768px) {
+  .container
+  {
+    padding: 15px;
+    width: 90vw;
+    margin: auto;
+  }
+  .container .toggel
+  {
+  width: 30px;
+  }
+}
+/* End Header */
+/* Start Landing Section */
+.landing
+{
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  flex-direction: column;
+  text-align: center;
+  height: calc(100vh - 60px) ;
+}
+.landing h1 
+{
+  font : normal bold 50px/50px "Work Sans", sans-serif;
+  color: var(--main-color);
+  margin: 0%;
+}
+.landing p 
+{
+  font : normal normal 20px/25px "Work Sans", sans-serif;
+}
+@media (max-width:768px) {
+  .landing h1 
+{
+  font : normal bold 35px/35px "Work Sans", sans-serif;
+  color: var(--main-color);
+  margin: 0%;
+}
+.landing p 
+{
+  font : normal normal 15px/25px "Work Sans", sans-serif;
+}
+}
+/* End Landing Section */
+/* Start Features */
+.features
+{
+  background-color: var(--section-background);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.features .container
+{
+  text-align: center;
+  align-content: center;
+}
+.features .container .feature i
+{
+  color: var(--main-color);
+}
+.feature
+{
+  width: calc(100% / 3);
+  margin: 10px;
+  padding-bottom: 10px ;
+}
+.feature h3
+{
+  font-weight: 800;
+  margin: 30px 0px ;
+}
+.feature p
+{
+  line-height: 1.5;
+  color: #777;
+  font-size: 17px;
+}
+@media (max-width:768px) {
+  .features .container
+  {
+    width: 90vw;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    text-align: center;
+    align-content: center;
+  }
+  .feature
+{
+  width: 100%;
+}
+}
+/* End Features */
+/* Start Services  */
+.services
+{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.services .container h2
+{
+  color: #ebeced;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+.services .container p
+{
+  color: #797979;
+  font-size: 20px;
+  margin: -30px 0px 0px;
+}
+@media (max-width:768px) {
+  .services .container h2
+  {
+    color: #ebeced;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: -3px;
+  }
+  .services .container p
+  {
+    color: #797979;
+    font-size: 15px;
+    margin: -30px 0px 0px;
+  }
+}
+/* Start Services  */
+/* Start Portfolio */
+/* End Portfolio */
+/* Start About */
+/* End About */
+/* Start Contact */
+/* End Contact */
+/* Start Footer */
+/* End Footer */
