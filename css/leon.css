@@ -216,6 +216,10 @@ header .container
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
+.services .container
+{
+  width: 85vw;
+}
 .services .container h2
 {
   color: #ebeced;
@@ -223,7 +227,7 @@ header .container
   font-weight: 800;
   letter-spacing: -3px;
 }
-.services .container p
+.services .container .servSlogn
 {
   color: #797979;
   font-size: 20px;
@@ -237,15 +241,123 @@ header .container
     font-weight: 800;
     letter-spacing: -3px;
   }
-  .services .container p
+  .services .container .servSlogn
   {
     color: #797979;
     font-size: 15px;
     margin: -30px 0px 0px;
   }
 }
-/* Start Services  */
+.serviceItems 
+{
+    margin-top: 100px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    gap: 30px;
+}
+.serviceItems .serv
+{
+    width: calc(50% - 30px);
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 30px;
+}
+.serviceItems .serv i
+{
+  color: var(--main-color);
+}
+.serv .servData
+{
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+  
+}
+.serv h3
+{
+  padding: 0px 0px 20px;
+}
+@media (max-width:768px){
+  .serviceItems .serv
+{
+    width: calc(100% - 30px);
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+}
+.serviceItems .serv i
+{
+  text-align: center;
+}
+}
+/* End Services  */
 /* Start Portfolio */
+.Portfolio
+{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.Portfolio .container
+{
+  width: 85vw;
+}
+.Portfolio .container h2
+{
+  color: #ebeced;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+.Portfolio .container .PortfolioSlogn
+{
+  color: #797979;
+  font-size: 20px;
+  margin: -30px 0px 0px;
+}
+@media (max-width:768px) {
+  .Portfolio .container h2
+  {
+    color: #ebeced;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: -3px;
+  }
+  .Portfolio .container .PortfolioSlogn
+  {
+    color: #797979;
+    font-size: 15px;
+    margin: -30px 0px 0px;
+  }
+}
+.protfolioProjects
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+.card
+{
+  background-color: white;
+  text-align: left;
+}
+.card img
+{
+  max-width: 100%;
+}
+.cardData
+{
+  padding: 20px;
+}
+.cardData p
+{
+  color: #777;
+  line-height: 1.6;
+  margin: 16px 0px 0px;
+}
 /* End Portfolio */
 /* Start About */
 /* End About */
